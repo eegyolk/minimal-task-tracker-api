@@ -1,40 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
 # Minimal Task Tracker API
 
 ## Description
@@ -54,6 +17,118 @@ This is a minimal task tracker API built with Next.js and SQLite. The API allows
 ## GET /api/tasks
 
 - **Response**: List all tasks in the database.
+  ```
+  [
+    {
+        "id": 1,
+        "user": "John",
+        "title": "My title 2",
+        "description": "My description 2",
+        "status": "INCOMPLETE",
+        "dateCreated": "2025-02-08 10:11:12",
+        "dateUpdated": "3/2/2025 1:11:49 PM"
+    },
+    {
+        "id": 2,
+        "user": "Jhayr",
+        "title": "Create minimal task tracker frontend",
+        "description": "To create a minimal task tracker fronted component as part of the technical evaluation.",
+        "status": "INPROGRESS",
+        "dateCreated": "2025-02-27 04:05:06",
+        "dateUpdated": "3/2/2025 12:40:48 PM"
+    },
+    {
+        "id": 3,
+        "user": "John",
+        "title": "My title 1",
+        "description": "My description 1",
+        "status": "PENDING",
+        "dateCreated": "2025-02-08 07:08:09",
+        "dateUpdated": "3/2/2025 1:49:56 PM"
+    },
+    {
+        "id": 4,
+        "user": "John",
+        "title": "My title 2",
+        "description": "My description 2",
+        "status": "INCOMPLETE",
+        "dateCreated": "2025-02-08 10:11:12",
+        "dateUpdated": "3/2/2025 2:21:49 PM"
+    },
+    {
+        "id": 7,
+        "user": "Edgardo",
+        "title": "Sample 1",
+        "description": "My task description sample 1",
+        "status": "INPROGRESS",
+        "dateCreated": "3/2/2025 9:58:02 AM",
+        "dateUpdated": "3/2/2025 1:45:04 PM"
+    },
+    {
+        "id": 8,
+        "user": "Vivian",
+        "title": "Create final project in Android",
+        "description": "To create the final project in Android mobile development",
+        "status": "COMPLETED",
+        "dateCreated": "3/2/2025 10:06:17 AM",
+        "dateUpdated": "3/2/2025 1:11:05 PM"
+    },
+    {
+        "id": 9,
+        "user": "Edgardo",
+        "title": "Create game maker app",
+        "description": "My game maker app task description",
+        "status": "COMPLETED",
+        "dateCreated": "3/2/2025 1:33:29 PM",
+        "dateUpdated": "3/2/2025 1:34:09 PM"
+    },
+    {
+        "id": 11,
+        "user": "Edgardo",
+        "title": "Sample task",
+        "description": "Aaa",
+        "status": "INPROGRESS",
+        "dateCreated": "3/2/2025 3:09:26 PM",
+        "dateUpdated": "3/2/2025 3:17:49 PM"
+    },
+    {
+        "id": 12,
+        "user": "Bbb",
+        "title": "Bbbbbbbb",
+        "description": "Cccccccccc",
+        "status": "PENDING",
+        "dateCreated": "3/2/2025 3:17:15 PM",
+        "dateUpdated": ""
+    },
+    {
+        "id": 13,
+        "user": "Aaa",
+        "title": "Aaa Aaa ",
+        "description": "Aaa Aaa Aaa",
+        "status": "PENDING",
+        "dateCreated": "3/2/2025 4:05:59 PM",
+        "dateUpdated": ""
+    },
+    {
+        "id": 14,
+        "user": "Ccccc",
+        "title": "c",
+        "description": "Aaa Aaa Aaa",
+        "status": "PENDING",
+        "dateCreated": "3/2/2025 4:05:59 PM",
+        "dateUpdated": ""
+    },
+    {
+        "id": 15,
+        "user": "A111",
+        "title": "A11111111",
+        "description": "A11111111111",
+        "status": "PENDING",
+        "dateCreated": "3/2/2025 4:09:15 PM",
+        "dateUpdated": ""
+    }
+]
+```
 
 ## GET /api/tasks/{id}
 

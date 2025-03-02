@@ -52,24 +52,85 @@ This is a minimal task tracker API built with Next.js and SQLite. The API allows
 ## GET /api/tasks/{id}
 
 - **Response**: Returns the task with the given id.
+  ```
+  {
+    "id": 1,
+    "user": "John",
+    "title": "My title 2",
+    "description": "My description 2",
+    "status": "INCOMPLETE",
+    "dateCreated": "2025-02-08 10:11:12",
+    "dateUpdated": "3/2/2025 1:11:49 PM"
+  }
+  ```
 
 ## POST /api/tasks
 
 - **Request Body**: JSON object containing task details.
+  ```
+  {
+    "user": "John",
+    "title": "My title 3",
+    "description": "My description 4",
+    "status": "PENDING",
+    "dateCreated": "2025-02-08 13:14:15",
+    "dateUpdated": ""
+  }
+  ```
+  
 - **Response**: Confirmation message upon successful creation.
+  ```
+  {
+    "message": "Success"
+  }
+  ```
 
 ## PUT /api/tasks/{id}
 
 - **Request Body**: JSON object with updated task details.
+  ```
+  {
+    "user": "John",
+    "title": "My title 2",
+    "description": "My description 2",
+    "status": "COMPLETED",
+    "dateCreated": "2025-02-08 10:11:12",
+    "dateUpdated": "2025-02-08 12:13:14"
+  }
+  ```
+  
 - **Response**: Confirmation message upon successful update.
+  ```
+  {
+    "message": "Success"
+  }
+  ```
 
 ## DELETE /api/tasks/{id}
 
 - **Response**: Confirmation message upon successful deletion.
+  ```
+  {
+    "message": "Successfully deleted a task."
+  }
+  ```
 
 ## GET /api/tasks/search?query={keyword}
 
 - **Response**: Tasks matching the keyword in either the title or description.
+  ```
+  [
+    {
+        "id": 8,
+        "user": "Vivian",
+        "title": "Create final project in Android",
+        "description": "To create the final project in Android mobile development",
+        "status": "COMPLETED",
+        "dateCreated": "3/2/2025 10:06:17 AM",
+        "dateUpdated": "3/2/2025 1:11:05 PM"
+    }
+  ]
+  ```
 
 ### API Endpoints:
 

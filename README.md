@@ -45,90 +45,9 @@ This is a minimal task tracker API built with Next.js and SQLite. The API allows
         "status": "PENDING",
         "dateCreated": "2025-02-08 07:08:09",
         "dateUpdated": "3/2/2025 1:49:56 PM"
-    },
-    {
-        "id": 4,
-        "user": "John",
-        "title": "My title 2",
-        "description": "My description 2",
-        "status": "INCOMPLETE",
-        "dateCreated": "2025-02-08 10:11:12",
-        "dateUpdated": "3/2/2025 2:21:49 PM"
-    },
-    {
-        "id": 7,
-        "user": "Edgardo",
-        "title": "Sample 1",
-        "description": "My task description sample 1",
-        "status": "INPROGRESS",
-        "dateCreated": "3/2/2025 9:58:02 AM",
-        "dateUpdated": "3/2/2025 1:45:04 PM"
-    },
-    {
-        "id": 8,
-        "user": "Vivian",
-        "title": "Create final project in Android",
-        "description": "To create the final project in Android mobile development",
-        "status": "COMPLETED",
-        "dateCreated": "3/2/2025 10:06:17 AM",
-        "dateUpdated": "3/2/2025 1:11:05 PM"
-    },
-    {
-        "id": 9,
-        "user": "Edgardo",
-        "title": "Create game maker app",
-        "description": "My game maker app task description",
-        "status": "COMPLETED",
-        "dateCreated": "3/2/2025 1:33:29 PM",
-        "dateUpdated": "3/2/2025 1:34:09 PM"
-    },
-    {
-        "id": 11,
-        "user": "Edgardo",
-        "title": "Sample task",
-        "description": "Aaa",
-        "status": "INPROGRESS",
-        "dateCreated": "3/2/2025 3:09:26 PM",
-        "dateUpdated": "3/2/2025 3:17:49 PM"
-    },
-    {
-        "id": 12,
-        "user": "Bbb",
-        "title": "Bbbbbbbb",
-        "description": "Cccccccccc",
-        "status": "PENDING",
-        "dateCreated": "3/2/2025 3:17:15 PM",
-        "dateUpdated": ""
-    },
-    {
-        "id": 13,
-        "user": "Aaa",
-        "title": "Aaa Aaa ",
-        "description": "Aaa Aaa Aaa",
-        "status": "PENDING",
-        "dateCreated": "3/2/2025 4:05:59 PM",
-        "dateUpdated": ""
-    },
-    {
-        "id": 14,
-        "user": "Ccccc",
-        "title": "c",
-        "description": "Aaa Aaa Aaa",
-        "status": "PENDING",
-        "dateCreated": "3/2/2025 4:05:59 PM",
-        "dateUpdated": ""
-    },
-    {
-        "id": 15,
-        "user": "A111",
-        "title": "A11111111",
-        "description": "A11111111111",
-        "status": "PENDING",
-        "dateCreated": "3/2/2025 4:09:15 PM",
-        "dateUpdated": ""
     }
-]
-```
+  ]
+  ```
 
 ## GET /api/tasks/{id}
 

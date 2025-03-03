@@ -50,9 +50,9 @@ Ensure that you have the following installed:
 3. Open the app in your browser:
    - Navigate to `http://localhost:3000` to view the app.
 
-### API Endpoints:
+## API Endpoints:
 
-## GET /api/tasks
+### GET /api/tasks
 
 - **Response**: List all tasks in the database.
   ```
@@ -87,7 +87,7 @@ Ensure that you have the following installed:
   ]
   ```
 
-## GET /api/tasks/{id}
+### GET /api/tasks/{id}
 
 - **Response**: Returns the task with the given id.
   ```
@@ -102,7 +102,7 @@ Ensure that you have the following installed:
   }
   ```
 
-## POST /api/tasks
+### POST /api/tasks
 
 - **Request Body**: JSON object containing task details.
   ```
@@ -123,7 +123,7 @@ Ensure that you have the following installed:
   }
   ```
 
-## PUT /api/tasks/{id}
+### PUT /api/tasks/{id}
 
 - **Request Body**: JSON object with updated task details.
   ```
@@ -144,7 +144,7 @@ Ensure that you have the following installed:
   }
   ```
 
-## DELETE /api/tasks/{id}
+### DELETE /api/tasks/{id}
 
 - **Response**: Confirmation message upon successful deletion.
   ```
@@ -153,7 +153,7 @@ Ensure that you have the following installed:
   }
   ```
 
-## GET /api/tasks/search?query={keyword}
+### GET /api/tasks/search?query={keyword}
 
 - **Response**: Tasks matching the keyword in either the title or description.
   ```
@@ -170,7 +170,7 @@ Ensure that you have the following installed:
   ]
   ```
 
-### API Endpoints:
+## Notes;
 
 - The database is stored locally in a file called tasktracker.db.
 - The project uses Next.js (version 15.2.0) for the backend and SQLite as the database.

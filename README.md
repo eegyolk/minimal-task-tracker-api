@@ -12,6 +12,44 @@ This is a minimal task tracker API built with Next.js and SQLite. The API allows
 - **Delete a task**: Remove tasks from the database.
 - **Search tasks**: Search for tasks by title or description.
 
+## Setup Instructions
+
+### Prerequisites
+
+Ensure that you have the following installed:
+
+- Node.js (v18 or later)
+- npm or yarn
+
+### Installation
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+   or if you are using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+2. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   or
+
+   ```bash
+   yarn dev
+   ```
+
+3. Open the app in your browser:
+   - Navigate to `http://localhost:3000` to view the app.
+
 ### API Endpoints:
 
 ## GET /api/tasks

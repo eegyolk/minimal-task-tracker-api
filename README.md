@@ -170,7 +170,7 @@ Ensure that you have the following installed:
   ]
   ```
 
-## Notes;
+## Notes:
 
 - The database is stored locally in a file called tasktracker.db.
 - The project uses Next.js (version 15.2.0) for the backend and SQLite as the database.

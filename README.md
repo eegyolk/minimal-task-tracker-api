@@ -81,7 +81,7 @@ This is a minimal task tracker API built with Next.js and SQLite. The API allows
 - **Response**: Confirmation message upon successful creation.
   ```
   {
-    "message": "Success"
+    "message": "Successfully created a task."
   }
   ```
 
@@ -102,7 +102,7 @@ This is a minimal task tracker API built with Next.js and SQLite. The API allows
 - **Response**: Confirmation message upon successful update.
   ```
   {
-    "message": "Success"
+    "message": "Successfully updated a task."
   }
   ```
 

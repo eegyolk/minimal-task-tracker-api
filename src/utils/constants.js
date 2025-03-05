@@ -1,0 +1,4 @@
+export const DATABASE = {
+	SQLITE: "SQLITE",
+	AZURE_COSMOS: "AZURE_COSMOS",
+};

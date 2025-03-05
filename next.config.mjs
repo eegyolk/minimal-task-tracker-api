@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
-
-import "./src/app/api/migration.js"; // Run migration at startup
+import "./src/db/migration.js"; // Run migration at startup
 
 const nextConfig = {
 	async headers() {

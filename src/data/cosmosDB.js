@@ -37,6 +37,7 @@ export const cosmosDB = {
 		if (tasks.length > 0) {
 			return tasks[0];
 		}
+
 		return;
 	},
 
@@ -47,52 +48,65 @@ export const cosmosDB = {
 		// Get the container
 		const container = db.container("Tasks");
 
+		// Parse the raw body and generate the id value
 		const jsonBody = JSON.parse(rawBody);
 		jsonBody.id = uuidv4();
 
+		// Use the items property to insert the new item
 		await container.items.upsert(jsonBody);
 	},
 
 	async updateData(id, rawBody) {
-		// // Open SQLite connection
-		// const db = await openDatabase();
-		// // Parse JSON manually
-		// const body = JSON.parse(rawBody);
-		// // Extract values and add the id to array
-		// const values = Object.values(body);
-		// values.push(id);
-		// // Extract fields
-		// const fields = Object.keys(body);
-		// let updateFields = "";
-		// fields.forEach((item, index) => {
-		// 	updateFields += `${item}=?`;
-		// 	if (Object.values(body).length - 1 != index) {
-		// 		updateFields += ",";
-		// 	}
-		// });
-		// // Update task into the "tasks" table
-		// await db.run(`UPDATE tasks SET ${updateFields} WHERE id=?`, values);
+		// Open Azure Cosmos connection
+		const db = await openDatabase();
+
+		// Get the container
+		const container = db.container("Tasks");
+
+		// Parse the raw body
+		const jsonBody = JSON.parse(rawBody);
+
+		// Specify the id and the patition key value, and specify all the data to be update
+		await container.item(id, id).patch([
+			{ op: "set", path: "/user", value: jsonBody.user },
+			{ op: "set", path: "/title", value: jsonBody.title },
+			{ op: "set", path: "/description", value: jsonBody.description },
+			{ op: "set", path: "/status", value: jsonBody.status },
+			{ op: "set", path: "/dateCreated", value: jsonBody.dateCreated },
+			{ op: "set", path: "/dateUpdated", value: jsonBody.dateUpdated },
+		]);
 	},
 
 	async deleteData(id) {
-		// // Open SQLite connection
-		// const db = await openDatabase();
-		// // Query to get the task with the given ID
-		// const task = await db.get("SELECT id FROM tasks WHERE id = ?", id);
-		// if (!task) {
-		// 	return false;
-		// }
-		// // Delete task into the "tasks" table
-		// await db.run(`DELETE FROM tasks WHERE id=?`, id);
+		// Open Azure Cosmos connection
+		const db = await openDatabase();
+
+		// Get the container
+		const container = db.container("Tasks");
+
+		// Specify the id and the patition key value for deletion
+		await container.item(id, id).delete();
 	},
 
 	async search(query) {
-		// // Open SQLite connection
-		// const db = await openDatabase();
-		// // Query to get the task with the given query (title or description)
-		// return await db.all(
-		// 	"SELECT * FROM tasks WHERE title LIKE ? OR description LIKE ?",
-		// 	[`%${query}%`, `%${query}%`]
-		// );
+		// Open Azure Cosmos connection
+		const db = await openDatabase();
+
+		// Get the container
+		const container = db.container("Tasks");
+
+		// Use the items property to run a query
+		const { resources: tasks } = await container.items
+			.query({
+				query:
+					"SELECT * FROM Tasks t WHERE t.title LIKE @title OR t.description LIKE @description",
+				parameters: [
+					{ name: "@title", value: `%${query}%` },
+					{ name: "@description", value: `%${query}%` },
+				],
+			})
+			.fetchAll();
+
+		return tasks;
 	},
 };

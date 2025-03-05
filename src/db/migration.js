@@ -49,7 +49,7 @@ async function setupAZURECOSMOSDatabase() {
 	// Create the container if it does not exist
 	const { container } = await db.containers.createIfNotExists({
 		id: "Tasks",
-		partitionKey: { kind: "Hash", paths: ["/partitionKey"] },
+		partitionKey: { kind: "Hash", paths: ["/id"] },
 	});
 
 	// Verify if the dummy task items already exists
